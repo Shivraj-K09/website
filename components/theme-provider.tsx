@@ -10,12 +10,13 @@ function ThemeProvider({
   return (
     <NextThemesProvider
       attribute="class"
-      defaultTheme="system"
+      defaultTheme="dark"
       enableSystem
       disableTransitionOnChange
       {...props}
     >
-      <ThemeHotkey />
+      {/* Theme hotkey disabled per request */}
+      {/* <ThemeHotkey /> */}
       {children}
     </NextThemesProvider>
   )
@@ -34,6 +35,7 @@ function isTypingTarget(target: EventTarget | null) {
   )
 }
 
+/*
 function ThemeHotkey() {
   const { resolvedTheme, setTheme } = useTheme()
 
@@ -67,5 +69,6 @@ function ThemeHotkey() {
 
   return null
 }
+*/
 
 export { ThemeProvider }
